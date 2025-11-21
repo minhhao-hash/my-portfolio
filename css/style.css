@@ -1,0 +1,120 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    background: #f4f4f4; 
+    color: #222;
+    transition: 0.3s;
+}
+
+/* 🌙 DARK MODE */
+body.dark {
+    background: #1a1a1a;
+    color: #eee;
+}
+
+body.dark nav {
+    background: #000;
+}
+
+body.dark .project,
+body.dark .input,
+body.dark .textarea {
+    background: #333;
+    color: white;
+    border-color: #555;
+}
+
+/* 🔝 Sticky Navbar */
+.navbar {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+#darkModeBtn {
+    padding: 6px 10px;
+    border: none;
+    background: #555;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+header { 
+    text-align: center; 
+    padding: 4rem 2rem; 
+    background: #333; 
+    color: white; 
+}
+
+section { 
+    padding: 3rem; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.project { 
+    background: white; 
+    padding: 2rem; 
+    margin: 1rem 0; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+}
+
+.avatar {
+    width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+input.input, textarea.textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ✨ Fade-in Animation */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+    nav a {
+        margin: 8px 0;
+    }
+}
